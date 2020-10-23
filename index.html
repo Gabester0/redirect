@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabester</title>
+    <style>
+        header{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The site has moved!</h1>
+        <p>You will be redirected to <a href="https://www.gabrieleipper.com">www.gabrieleipper.com</a> in <span id="time">5</span> seconds</p>
+    </header>
+    <script>
+        const time = document.getElementById(`time`);
+        let countdown = 4;
+        setInterval(()=>{
+            time.innerHTML = countdown--;
+            if(countdown === 0) window.location = `https://www.gabrieleipper.com`
+        },1000)
+    </script>
+</body>
+</html>
